@@ -3,13 +3,11 @@
 function insert_Row() {
             //Write your code here
 		let table = document.getElementById("sampleTable");
-		let row = document.createElement("tr");
-		let cell1 = document.createElement("td");
-		let cell2 = document.createElement("td");
-		cell1.textContent = "New Cell1";
-		cell2.textContent ="New Cell2";
-		row.appendChild(cell1);
-		row.appendChild(cell2);
-        table.insertAdjacentElement("afterbegin",row);
+		var row = table.insertRow(0);
+		var cell1 = row.insertCell(0);
+	    var cell2 = row.insertCell(1);
+	    cell1.innerHTML = "New Cell1";
+	    cell2.innerHTML = "New Cell2";
+
         
 }
